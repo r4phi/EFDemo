@@ -1,12 +1,15 @@
-﻿using System;
+﻿using EFDemo.Model;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EFDemo.DBContext
 {
-    class UserContext :System.Data.Entity.DbContext
+    class UserContext : DbContext
     {
+        public DbSet<User> Users { get; set; }
     }
 }
